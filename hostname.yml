@@ -1,0 +1,7 @@
+- hosts: server
+  gather_facts: false
+  tasks:
+  - name: Change hostname
+    shell: 
+      cmd: echo {{hostname}} >> /etc/hostname
+ 
