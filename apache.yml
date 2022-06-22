@@ -1,0 +1,10 @@
+- hosts: server
+  gather_facts: false
+  tasks:
+   - name: Install apache
+     yum: printenv
+      name: httpd
+      state: present
+   - name: Check if apache is running
+     service: httpd
+     state: started
